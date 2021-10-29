@@ -1,0 +1,72 @@
+.weather{
+	&-component{
+		&-second{
+			&-container{
+				display: grid;
+				width: 30em;
+				height:15em;
+				margin:2em;
+				padding:1em;
+
+				color:white;
+			}
+		}
+	}
+}
+
+.button-second{
+	display: grid;
+	place-self: center;
+	place-items: center;
+	width:20em;
+	padding: 0em 1em 0em 1em;
+	height: 5em;
+	font-size: large;
+	background-color: rgba(255, 255, 255, 0);
+	border: 0.05em solid darkgrey ;
+	border-radius: 2%;
+	color:white;
+
+	&:hover{
+		background-color: rgba(255, 255, 255, 0.157);
+	}
+
+	&:active {
+		background-color: #3e8e41;
+		box-shadow: 0 0.01em rgba(102, 102, 102, 0.13);
+		transform: translateY(4px);
+	}
+
+	&-empty{
+		display: grid;
+		place-self: center;
+		place-items: center;
+		width:20em;
+		padding: 0em 1em 0em 1em;
+		height: 5em;
+		font-size: large;
+		background-color: rgba(255, 255, 255, 0);
+		border: 0.05em solid rgba(169, 169, 169, 0.2) ;
+		border-radius: 2%;
+		color:rgba(255, 255, 255, 0.2);
+	
+			&:hover{
+				background-color: rgba(255, 255, 255, 0.157);
+			}
+	
+			&:active {
+				background-color: #bb2539;
+				box-shadow: 0 0.01em rgba(102, 102, 102, 0.13);
+				transform: translateY(4px);
+			}
+		
+		}
+}
+
+.input-second{
+	line-height:3em;
+	font-size: 2em;
+	font-weight: 500;
+	padding:0.2em;
+	text-align: center;
+}
