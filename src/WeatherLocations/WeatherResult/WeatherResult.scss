@@ -1,0 +1,26 @@
+.weather{
+	&-result{
+		&-container{
+			display: grid;
+
+			padding:1em;
+			width: 30em;
+			height: 10em;
+			color: white;
+
+			font-family: "Helvetica", sans-serif;
+
+			place-items: center;
+		}
+
+	}
+}
+
+.awaiting-input{
+	font-family: "Helvetica", sans-serif;
+	line-height:3em;
+	font-size: 1.5em;
+	font-weight: 500;
+	padding:0.2em;
+	text-align: center;
+}
