@@ -4,16 +4,13 @@ import './FirstWeatherLocation.scss';
 function FirstWeatherLocation(props) {
 
 	const [weather, setWeather] = useState();
-	const [url, setUrl] = useState(''); 
-	const [temperature, setTemperature] = useState('')
-	const [city, setCity] = useState('')
+	const [url, setUrl] = useState('');
 
 	let baseUrl
 	// Fill in blanks with a valid url and hash key to initiate API request
 	// The {url} is a city name
 	baseUrl = '' + url + "&days=1&aqi=no&alerts=no";
 
-			
 	const fetchData = async () => {
 		try {
 			const response = await fetch(baseUrl, {
@@ -35,15 +32,11 @@ function FirstWeatherLocation(props) {
 
 	let clickMe = () => {
 		fetchData();
-		console.log(weather)
 		try{
-			setTemperature(weather.current.temp_c)
-			setCity(weather.location.name)
 			props.firstToParentTemperature(weather.current.temp_c)
 			props.firstToParentCity(weather.location.name)
 		} catch(error) {
-			alert("Invalid city")
-			console.log("error", error);
+			alert("Invalid city");
 		}
 	}
 
@@ -62,10 +55,10 @@ function FirstWeatherLocation(props) {
 		return (
 			<div className="weather-component-first-container">
 
-			<input className="input-first" placeholder="Type a city name..." value={url} onChange={e => setUrl(e.target.value)}/>
+			<input className="input-first" placeholder="Type in a city name..." value={url} onChange={e => setUrl(e.target.value)}/>
 
 			<button className="button-first-empty" onClick={() => clickMe()}>
-			( No city yet )
+				( No city yet )
 			</button>
 			</div>
 		)

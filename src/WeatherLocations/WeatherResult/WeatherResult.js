@@ -3,8 +3,6 @@ import './WeatherResult.scss';
 
 function WeatherResult(props) {
 
-	console.log(props.fromFirstCity)
-
 	if(props.fromFirstCity=== ''){
 		console.log('NULLA');
 	}
@@ -44,8 +42,7 @@ function WeatherResult(props) {
 		return <div className="weather-result-container">
 			<div className="awaiting-input">
 				AWAITING VALID INPUT
-			</div>			 
-
+			</div>
 		</div>
 	}
 

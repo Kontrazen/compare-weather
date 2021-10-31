@@ -1,12 +1,10 @@
-
 import './App.scss';
-
-import WeatherGroup from './WeatherLocations/WeatherGroup.js/WeatherGroup';
+import WeatherGroup from './WeatherLocations/WeatherGroup/WeatherGroup';
 
 function App() {
   return (
     <div className="App">
-		<WeatherGroup/>
+      <WeatherGroup/>
     </div>
   );
 }

@@ -5,8 +5,6 @@ function SecondWeatherLocation(props) {
 
 	const [weather, setWeather] = useState();
 	const [url, setUrl] = useState(''); 
-	const [temperature, setTemperature] = useState('')
-	const [city, setCity] = useState('')
 
 	let baseUrl
 	// Fill in blanks with a valid url and hash key to initiate API request
@@ -37,12 +35,10 @@ function SecondWeatherLocation(props) {
 		fetchData();
 		console.log(weather)
 		try{
-			setTemperature(weather.current.temp_c)
-			setCity(weather.current.temp_c)
 			props.secondToParentTemperature(weather.current.temp_c)
 			props.secondToParentCity(weather.location.name)
 		} catch(error) {
-			alert("Invalid city")
+			alert("Invalid city");
 			console.log("error", error);
 		}
 	}
@@ -61,7 +57,7 @@ function SecondWeatherLocation(props) {
 			return (
 				<div className="weather-component-first-container">
 	
-				<input className="input-first" placeholder="Type a city name..." value={url} onChange={e => setUrl(e.target.value)}/>
+				<input className="input-first" placeholder="Type in a city name..." value={url} onChange={e => setUrl(e.target.value)}/>
 	
 				<button className="button-first-empty" onClick={() => clickMe()}>
 					( No city yet )
